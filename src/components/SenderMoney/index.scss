@@ -1,0 +1,30 @@
+.SenderMoney {
+  &-Wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    padding: 20px 40px;
+  }
+
+  &-Dollar::before {
+    content: '$';
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 10px;
+  }
+
+  &-Direction::before {
+    content: '→';
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 10px;
+  }
+
+  &-Input {
+    font-size: 16px;
+    line-height: 20px;
+    border: 0;
+    outline: 0;
+    text-align: center;
+  }
+}
