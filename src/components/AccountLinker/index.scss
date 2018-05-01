@@ -1,0 +1,74 @@
+
+form{
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 50px auto 50px;
+  padding: 45px;
+  text-align: center;
+}
+
+input {
+  font-size: 16px;
+  line-height: 20px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+input:focus{
+  outline: 0 none;
+}
+input:-moz-placeholder{
+  color: #ABABAB;
+  opacity: 0.5;
+}
+
+.steps{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.AccountLinker-Root{
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.AccountLinker-Destination{
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #F75100;
+  width: 70%;
+  border: 0;
+  padding: 15px;
+  color: rgb(2, 2, 2);
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #7387d6;
+}
+
+
+  
+
