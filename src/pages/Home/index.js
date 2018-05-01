@@ -33,4 +33,8 @@ class Home extends Component {
 
 Home.contextTypes = { i18n: PropTypes.object }
 
+Home.propTypes = {
+  onResponse: PropTypes.func
+}
+
 export default Home
