@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@s-ui/bundler": "2",
-    "@s-ui/ssr": "beta",
+    "@s-ui/ssr": "1",
     "@s-ui/lint": "2",
     "@s-ui/mono": "1",
     "@s-ui/precommit": "2",
