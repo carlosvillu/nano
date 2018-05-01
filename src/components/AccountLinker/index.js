@@ -6,8 +6,8 @@ class AccountLinker extends Component {
     super()
 
     this.state = {
-      input_root: '',
-      input_destination: '',
+      inputRoot: '',
+      inputDestination: '',
     }
   }
 
@@ -41,7 +41,7 @@ class AccountLinker extends Component {
   }
 
   render () {
-    const { input_root, input_destination } = this.state
+    const { inputRoot, inputDestination } = this.state
     return (
       <div className='AccountLinker'>
         <h1 className='steps'>1.Step one</h1>
@@ -55,7 +55,7 @@ class AccountLinker extends Component {
             autoFocus=''
             placeholder='AC ROOT'
             spellCheck='false'
-            value={input_root}
+            value={inputRoot}
             onChange={this.handleChange}
           />
           <input
@@ -67,7 +67,7 @@ class AccountLinker extends Component {
             autoFocus=''
             placeholder='AC DESTINATION'
             spellCheck='false'
-            value={input_destination}
+            value={inputDestination}
             onChange={this.handleChange}
           />
           <button onClick={this.handleClick} >VINCULAR CUENTA</button>
@@ -78,4 +78,7 @@ class AccountLinker extends Component {
 }
 
 AccountLinker.contextTypes = {i18n: PropTypes.object}
+AccountLinker.propTypes = {
+  onResponse: PropTypes.func
+}
 export default AccountLinker

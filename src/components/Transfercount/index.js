@@ -7,7 +7,7 @@ class Transfercount extends Component {
   }
   componentWillReceiveProps (nextProps) {
     const {account, amount, currency} = nextProps
-    console.log('Will', {account, amount, currency})
+
     account && amount && currency && window.brainblocks.Button.render({
       // Pass in payment options
       payment: {
@@ -23,7 +23,7 @@ class Transfercount extends Component {
   }
   render () {
     const { amount } = this.props || 0.0000
-    console.log(this.props)
+
     return (
       <div>
         <h1 className='steps'>2.Step two</h1>
@@ -32,6 +32,12 @@ class Transfercount extends Component {
       </div>
     )
   }
+}
+
+Transfercount.propTypes = {
+  account: PropTypes.string,
+  amount: PropTypes.number,
+  currency: PropTypes.string
 }
 
 export default Transfercount
