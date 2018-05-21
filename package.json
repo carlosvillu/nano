@@ -15,9 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "@s-ui/component-peer-dependencies": "1",
+    "@s-ui/domain": "1",
     "@s-ui/hoc": "1",
     "@s-ui/i18n": "1",
     "@s-ui/react-initial-props": "1",
+    "classnames": "2.2.5",
     "isomorphic-fetch": "2.2.1",
     "reset-css": "3.0.0"
   },
@@ -44,7 +46,11 @@
     "offline": {
       "whitelist": [
         "::all::"
-      ]
+      ],
+      "runtime": [{
+        "urlPattern": "svg-loaders\\.surge\\.sh",
+        "handler" : "cacheFirst"
+      }]
     }
   },
   "eslintConfig": {
