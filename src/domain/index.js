@@ -1,13 +1,13 @@
-/* global fetch */
-require('isomorphic-fetch')
+import { EntryPointFactory } from '@s-ui/domain'
 
-module.exports = {
-  users: () =>
-    fetch('https://jsonplaceholder.typicode.com/users').then(resp =>
-      resp.json()
-    ),
-  user: id =>
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then(resp =>
-      resp.json()
-    )
+import AccountsUseCasesFactory from './accounts/UseCases/factory'
+
+import Config from './config'
+
+const config = new Config()
+
+const useCases = {
+  'request_entry_accounts_use_case': AccountsUseCasesFactory.requestEntryAccountsUseCase()
 }
+
+export default EntryPointFactory({ config, useCases })
