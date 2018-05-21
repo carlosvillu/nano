@@ -1,0 +1,25 @@
+.App {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-links {
+    display: flex;
+  }
+
+  &-link {
+    color: #007bff;
+    margin: 5px;
+    text-decoration: none;
+  }
+
+  &-separator {
+    margin: 5px;
+  }
+}
