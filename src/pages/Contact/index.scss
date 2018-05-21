@@ -1,0 +1,26 @@
+.Contact {
+  &-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &-textare {
+    border: 0;
+    border-bottom: 1px solid;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    outline: 0 none;
+    width: 75%;
+  }
+
+  &-button {
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-top: 30px;
+    padding: 5px;
+    width: 75%;
+  }
+}

@@ -1,40 +1,46 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-import AccountLinker from '../../components/AccountLinker'
-import Transfercount from '../../components/Transfercount'
-import Explanation from '../../components/Explanation'
+import Line from '../../components/Line'
+import Title from '../../components/Title'
+import Request from '../../components/Request'
+import CountDown from '../../components/CountDown'
+import Section from '../../components/Section'
+import Input from '../../components/Form/Input'
 
-class Home extends Component {
-  constructor (props) {
-    super()
-  }
-  state = {}
-  onResponse = (resp) => { this.setState(resp) }
+class Home extends React.PureComponent {
+  static contextTypes = {i18n: PropTypes.object}
+  static displayName = 'Home'
+
+  state = {response: {}, account: ''}
+
   render () {
+    const {createdAt = false} = this.state.response
+    const {i18n} = this.context
     return (
       <div className='Home'>
-        <header className='Home-title'>
-          <img className='logo' src={'https://cdn3.f-cdn.com/contestentries/1021201/23871606/5915c3a7b7850_thumb900.jpg'} />
-          <h1 className='Home-title'>ENVIA DINERO CON PRIVACIDAD</h1>
-        </header>
-        <section className='Home-section'>
-          <hr />
-          <AccountLinker onResponse={this.onResponse} />
-          <hr />
-          <Transfercount {...this.state} />
-          <hr />
-          <Explanation />
-        </section>
+        <Line />
+        <Section>
+          <Title>{i18n.t('DESTINATION_ACCOUNT_TITLE')}</Title>
+          <p className='Home-description'>{i18n.t('DESTINATION_ACCOUNT_DESCRIPTION')}</p>
+          <Input placeholder={i18n.t('DESTINATION_ACCOUNT_PLACEHOLDER')} onChange={evt => this.setState({account: evt.target.value})} value={this.state.account} />
+        </Section>
+        <Line />
+        <Section>
+          <Title>{i18n.t('REQUEST_ACCOUNT_TITLE')}</Title>
+          <p className='Home-description'>{i18n.t('REQUEST_ACCOUNT_DESCRIPTION')}</p>
+          <Request onResponse={response => this.setState({response})} destination={this.state.account} />
+        </Section>
+        <Line />
+        <Section display={createdAt}>
+          <Title>{i18n.t('COUNTDOWN_TITLE')}</Title>
+          <p className='Home-description'>{i18n.t('COUNTDOWN_DESCRIPTION')}</p>
+          <CountDown startAt={createdAt} />
+        </Section>
+        <Line display={createdAt} />
       </div>
     )
   }
-}
-
-Home.contextTypes = { i18n: PropTypes.object }
-
-Home.propTypes = {
-  onResponse: PropTypes.func
 }
 
 export default Home
