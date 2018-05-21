@@ -9,11 +9,21 @@ const loadHomePage = loadPage(contextFactory, () =>
   import(/* webpackChunkName: "Home" */ './pages/Home')
 )
 
+const loadContactPage = loadPage(contextFactory, () =>
+  import(/* webpackChunkName: "Contact" */ './pages/Contact')
+)
+
+const loadAboutPage = loadPage(contextFactory, () =>
+  import(/* webpackChunkName: "About" */ './pages/About')
+)
+
 export default (
   <Router>
     <Route component={require('./components/App').default}>
       <Route path='/'>
         <IndexRoute getComponent={loadHomePage} />
+        <Route path='contact' getComponent={loadContactPage} />
+        <Route path='about' getComponent={loadAboutPage} />
       </Route>
     </Route>
   </Router>
