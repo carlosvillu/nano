@@ -8,6 +8,7 @@
     "co": "sui-mono commit",
     "lint": "sui-lint js && sui-lint sass",
     "precommit": "sui-precommit run",
+    "deploy": "sui-bundler build -C && firebase deploy",
     "ssr": "sui-bundler build -C && sui-ssr build -C && node --inspect ./server"
   },
   "keywords": [],
