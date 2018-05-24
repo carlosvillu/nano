@@ -25,9 +25,6 @@ export default class Account extends React.PureComponent {
   }
 
   render () {
-    // eslint-disable-next-line
-    // debugger
-
     const {createdAt = false, status, destination_account, routeParams} = this.props
     const IS_TEMP = status === 'TEMP'
     const IS_KO = status === 'KO'
