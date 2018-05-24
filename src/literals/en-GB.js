@@ -8,6 +8,8 @@ module.exports = {
   DESTINATION_ACCOUNT_TITLE: '1. Start by introducing your destination account',
   DESTINATION_ACCOUNT_DESCRIPTION: 'Make sure you OWN this account.',
   DESTINATION_ACCOUNT_PLACEHOLDER: 'your destination account',
+  DESTINATION_ACCOUNT_INFO_TITLE: '',
+  DESTINATION_ACCOUNT_INFO_DESCRIPTION: 'Make sure you own this account. because will be the destination accoun',
   REQUEST_ACCOUNT_TITLE: '2. Request a nano privacy account',
   REQUEST_ACCOUNT_DESCRIPTION: 'Remember that nano privacy must be validated within 24hrs',
   COUNTDOWN_TITLE: 'That\'s all!',
@@ -19,5 +21,9 @@ module.exports = {
   CONTACT_EMAIL_PLACEHOLDER: 'Your email',
   CONTACT_MESSAGE_PLACEHOLDER: 'Your message',
   ABOUT_US_TONI_BIO: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt',
-  ABOUT_US_CARLOS_BIO: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt'
+  ABOUT_US_CARLOS_BIO: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt',
+  ACCOUNT_KO_TITLE: 'Pair account/token are not valid',
+  ACCOUNT_KO_DESCRIPTION: 'DONT send nanos to this account, because your money never will end in your destination account.',
+  ACCOUNT_OK_TITLE: 'You own this account',
+  ACCOUNT_OK_DESCRIPTION: 'All nanos send it to this account will endedn in your destination account'
 }
