@@ -1,0 +1,13 @@
+.QRAccount {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  &-account {
+    border: 0;
+    border-bottom: 1px solid;
+    margin-top: 5px;
+
+  }
+}

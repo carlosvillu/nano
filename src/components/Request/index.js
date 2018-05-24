@@ -22,12 +22,11 @@ export default class Request extends React.PureComponent {
   render () {
     const {i18n} = this.context
     const {destination} = this.props
-    const {isLoading, hasError, hasAccount, account} = this.state
+    const {isLoading, hasError, hasAccount} = this.state
 
     const button = cx('Request-button', {'has-account': hasAccount, 'has-destination': destination})
     const loader = cx('Request-loading', {'is-loading': isLoading})
     const error = cx('Request-error', {'has-error': hasError})
-    const qr = cx('Request-qr', {'has-account': hasAccount})
 
     return (
       <div className='Request'>
@@ -36,10 +35,6 @@ export default class Request extends React.PureComponent {
           <span>{i18n.t('REQUEST')}</span>
         </div>
         <p className={error}>{i18n.t('REQUEST_ERROR')}</p>
-        <div className={qr}>
-          <img src={`https://chart.googleapis.com/chart?chs=160x160&cht=qr&chl={account}&choe=UTF-8'`} width='160' height='160' />
-          <p>{account}</p>
-        </div>
       </div>
     )
   }
@@ -54,7 +49,7 @@ export default class Request extends React.PureComponent {
       .execute()
       .catch(() => this.setState({isLoading: false, hasError: true, hasAccount: false}))
 
-    this.setState({isLoading: false, hasError: false, hasAccount: resp.account !== undefined, account: resp.account})
+    this.setState({isLoading: false, hasError: false, hasAccount: resp.account !== undefined})
     this.props.onResponse(resp)
   }
 }
