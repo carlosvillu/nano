@@ -25,5 +25,11 @@ module.exports = {
   ACCOUNT_KO_TITLE: 'Pair account/token are not valid',
   ACCOUNT_KO_DESCRIPTION: 'DONT send nanos to this account, because your money never will end in your destination account.',
   ACCOUNT_OK_TITLE: 'You own this account',
-  ACCOUNT_OK_DESCRIPTION: 'All nanos send it to this account will endedn in your destination account'
+  ACCOUNT_OK_DESCRIPTION: 'All nanos send it to this account will endedn in your destination account',
+  HOW_IT_IS_WORKS: 'How it\'s works',
+  WHAT_IT_IS_TITLE: 'What it\'s ?',
+  WHAT_IT_IS_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt',
+  HOW_IT_IS_WORKS_TITLE: 'How it\'s ?',
+  HOW_IT_IS_WORKS_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt',
+
 }
