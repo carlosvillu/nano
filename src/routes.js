@@ -9,6 +9,10 @@ const loadHomePage = loadPage(contextFactory, () =>
   import(/* webpackChunkName: "Home" */ './pages/Home')
 )
 
+const loadHowItWorksPage = loadPage(contextFactory, () =>
+  import(/* webpackChunkName: "HowItWorks" */ './pages/How')
+)
+
 const loadContactPage = loadPage(contextFactory, () =>
   import(/* webpackChunkName: "Contact" */ './pages/Contact')
 )
@@ -26,6 +30,7 @@ export default (
     <Route component={require('./components/App').default}>
       <Route path='/'>
         <IndexRoute getComponent={loadHomePage} />
+        <Route path='how-it-works' getComponent={loadHowItWorksPage} />
         <Route path='contact' getComponent={loadContactPage} />
         <Route path='about' getComponent={loadAboutPage} />
         <Route path='account/:direction' getComponent={loadAccountPage} />
