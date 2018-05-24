@@ -18,6 +18,8 @@ const App = ({ children }, {i18n}) => (
       <div className='Next-links'>
         <Link to='/' className='App-link'>{i18n.t('HOME')}</Link>
         <span className='App-separator'>|</span>
+        <Link to='how-it-works' className='App-link'>{i18n.t('HOW_IT_IS_WORKS')}</Link>
+        <span className='App-separator'>|</span>
         <Link to='about' className='App-link'>{i18n.t('ABOUT_US')}</Link>
         <span className='App-separator'>|</span>
         <Link to='contact' className='App-link'>{i18n.t('CONTACT_US')}</Link>
