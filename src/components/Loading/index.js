@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import Line from '../../components/Line'
 import Section from '../../components/Section'
+import LoadingSVG from '../SVG/Loading'
 
 const Loading = ({children}) => {
   return (
@@ -10,7 +11,7 @@ const Loading = ({children}) => {
       <Line />
       <Section>
         <div className='Loading'>
-          <img className='Loading-spinner' src='https://svg-loaders.surge.sh/bars.svg' />
+          <LoadingSVG className='Loading-spinner' />
           <p>{children}</p>
         </div>
       </Section>

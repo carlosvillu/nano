@@ -9,7 +9,7 @@ const App = ({ children }, {i18n}) => (
     <Topbar />
     <header className='App-header'>
       <div className='App-container'>
-        <p className='App-claim'>Privacy Nano</p>
+        <span className='App-claim'>Privacy <span className='App-nano'>Nano</span></span>
         <p className='App-subclaim'>{i18n.t('CLAIM')}</p>
       </div>
     </header>

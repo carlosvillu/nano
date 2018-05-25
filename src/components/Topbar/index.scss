@@ -7,7 +7,15 @@
 
   &-link {
     display: inline-block;
-    padding: 0 8px;
+    padding: 0 25px;
+
+    @media screen and (max-width: $b-tablet) {
+      padding: 0 8px;
+    }
+
+    @media screen and (max-width: $b-mobile) {
+      padding: 0 8px;
+    }
   }
 
   &-logo {

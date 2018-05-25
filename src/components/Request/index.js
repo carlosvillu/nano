@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import cx from 'classnames'
+import LoadingSVG from '../SVG/Loading'
 
 export default class Request extends React.PureComponent {
   static displayName = 'Request'
@@ -31,7 +32,7 @@ export default class Request extends React.PureComponent {
     return (
       <div className='Request'>
         <div className={button} onClick={this.requestClickHandler}>
-          <img className={loader} src='https://svg-loaders.surge.sh/bars.svg' />
+          <LoadingSVG className={loader} />
           <span>{i18n.t('REQUEST')}</span>
         </div>
         <p className={error}>{i18n.t('REQUEST_ERROR')}</p>

@@ -7,10 +7,16 @@
 
   &-container {
     padding: 20% 24px;
+    @media screen and (max-width: $b-tablet) {
+      padding: 24% 24px;
+    }
+
+    @media screen and (max-width: $b-mobile) {
+      padding: 24% 24px;
+    }
   }
 
   &-header {
-    align-items: center;
     background-image: url('https://svg-loaders.surge.sh/hero-privacyNano.jpg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -18,17 +24,49 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    @media screen and (max-width: $b-tablet) {
+      align-items: center;
+    }
+
+    @media screen and (max-width: $b-mobile) {
+      align-items: center;
+    }
   }
 
   &-claim {
     color: $c-white;
-    font-size: $fz-xxl;
+    font-size: 5rem;
     font-weight: $fw-bold;
+    border: 1px solid #43b699;
+
+    @media screen and (max-width: $b-tablet) {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: $b-mobile) {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  &-nano {
+    background-color: $c-text-nano;
+    color: $c-black;
   }
 
   &-subclaim {
     color: darken($c-white, 25%);
-    margin-top: $m-s;
+    margin-top: $m-xl;
+    @media screen and (max-width: $b-tablet) {
+      display: none;
+    }
+
+    @media screen and (max-width: $b-mobile) {
+      display: none;
+    }
   }
 
   &-children {
