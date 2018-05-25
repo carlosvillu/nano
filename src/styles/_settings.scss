@@ -1,4 +1,4 @@
-@import './utils';
+
 
 // Shade step {color}-light or {color}-dark variation
 $c-dark-step: -2 !default;
@@ -10,6 +10,8 @@ $c-light-step: 2 !default;
 
 // System color
 $c-system: #000000 !default;
+$c-topbar: rgba(255,255,255,.8);
+$c-footer: #fafafa;
 
 // Primary color
 $c-primary: #2b91c1 !default;
@@ -64,3 +66,7 @@ $c-google: #d34836 !default;
 $c-youtube: #bb0000 !default;
 $c-whatsapp: #7ed321 !default;
 $c-instagram: #8a3ab9 !default;
+
+// Breackpoints
+$b-tablet: 768px;
+$b-mobile: 500px;
