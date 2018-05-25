@@ -53,6 +53,18 @@
         {
           "urlPattern": "svg-loaders\\.surge\\.sh",
           "handler": "cacheFirst"
+        },
+        {
+          "urlPattern": "fonts\\.googleapis\\.com",
+          "handler": "cacheFirst"
+        },
+        {
+          "urlPattern": "fonts\\.gstatic\\.com",
+          "handler": "cacheFirst"
+        },
+        {
+          "urlPattern": "chart\\.googleapis\\.com",
+          "handler": "cacheFirst"
         }
       ]
     }
