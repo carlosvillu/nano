@@ -1,25 +1,39 @@
 .App {
-  margin-top: 20px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  &-container {
+    padding: 20% 24px;
+  }
 
   &-header {
+    align-items: center;
+    background-image: url('https://svg-loaders.surge.sh/hero-privacyNano.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: 100%;
   }
 
-  &-links {
-    display: flex;
+  &-claim {
+    color: $c-white;
+    font-size: $fz-xxl;
+    font-weight: $fw-bold;
   }
 
-  &-link {
-    color: #007bff;
-    margin: 5px;
-    text-decoration: none;
+  &-subclaim {
+    color: darken($c-white, 25%);
+    margin-top: $m-s;
   }
 
-  &-separator {
-    margin: 5px;
+  &-children {
+    padding: 0 $p-l;
   }
+
+
 }
