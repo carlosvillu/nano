@@ -14,7 +14,6 @@ class Contact extends React.PureComponent {
     const {i18n} = this.context
     return (
       <div className='Contact'>
-        <Line />
         <Section>
           <Title>{i18n.t('CONTACT_TITLE')}</Title>
           <form className='Contact-form' method='POST' action='https://formspree.io/carlosvillu@gmail.com'>
@@ -23,7 +22,6 @@ class Contact extends React.PureComponent {
             <button className='Contact-button' type='submit'>{i18n.t('SEND')}</button>
           </form>
         </Section>
-        <Line />
       </div>
     )
   }

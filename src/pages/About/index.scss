@@ -2,16 +2,22 @@
   &-card {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: $b-tablet) {
+      display: flex;
+      flex-direction: column
+    }
+
+    @media screen and (max-width: $b-mobile) {
+      display: flex;
+      flex-direction: column
+    }      
   }
 
   &-img {
     width: 150px;
     height: 150px;
-    border-radius: 5px;
+    border-radius: 50%;
     margin-right: 10px;
-  }
-
-  &-bio {
-    text-align: justify;
   }
 }

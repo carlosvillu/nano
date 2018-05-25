@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import Line from '../../components/Line'
 import Title from '../../components/Title'
+import Paragraph from '../../components/Paragraph'
 import Request from '../../components/Request'
 import Section from '../../components/Section'
 import Input from '../../components/Form/Input'
@@ -20,10 +21,9 @@ class Home extends React.PureComponent {
 
     return (
       <div className='Home'>
-        <Line />
         <Section>
           <Title>{i18n.t('DESTINATION_ACCOUNT_TITLE')}</Title>
-          <p className='Home-description'>{i18n.t('DESTINATION_ACCOUNT_DESCRIPTION')}</p>
+          <Paragraph>{i18n.t('DESTINATION_ACCOUNT_DESCRIPTION')}</Paragraph>
           <Input
             placeholder={i18n.t('DESTINATION_ACCOUNT_PLACEHOLDER')}
             onChange={evt => this.setState({account: evt.target.value})}
@@ -33,13 +33,12 @@ class Home extends React.PureComponent {
         <Line />
         <Section>
           <Title>{i18n.t('REQUEST_ACCOUNT_TITLE')}</Title>
-          <p className='Home-description'>{i18n.t('REQUEST_ACCOUNT_DESCRIPTION')}</p>
+          <Paragraph>{i18n.t('REQUEST_ACCOUNT_DESCRIPTION')}</Paragraph>
           <Request
             onResponse={({account, token}) => router.push(`/account/${account}?token=${token}`)}
             destination={this.state.account}
           />
         </Section>
-        <Line />
       </div>
     )
   }

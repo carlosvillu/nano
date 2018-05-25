@@ -7,6 +7,7 @@ import Loading from '../../components/Loading'
 import QRAccount from '../../components/QRAccount'
 import Section from '../../components/Section'
 import Title from '../../components/Title'
+import Paragraph from '../../components/Paragraph'
 
 export default class Account extends React.PureComponent {
   static contextTypes = {i18n: PropTypes.object}
@@ -32,35 +33,30 @@ export default class Account extends React.PureComponent {
     const {i18n} = this.context
     return (
       <div className='Account'>
-        <Line />
-
         <Section display={IS_OK}>
           <Title>{i18n.t('ACCOUNT_OK_TITLE')}</Title>
-          <p>{i18n.t('ACCOUNT_OK_DESCRIPTION')}</p>
+          <Paragraph>{i18n.t('ACCOUNT_OK_DESCRIPTION')}</Paragraph>
           <QRAccount account={routeParams.direction} />
         </Section>
         <Line display={IS_OK} />
 
         <Section display={IS_KO}>
           <Title>{i18n.t('ACCOUNT_KO_TITLE')}</Title>
-          <p>{i18n.t('ACCOUNT_KO_DESCRIPTION')}</p>
+          <Paragraph>{i18n.t('ACCOUNT_KO_DESCRIPTION')}</Paragraph>
         </Section>
-        <Line display={IS_KO} />
 
         <Section display={IS_TEMP}>
           <Title>{i18n.t('COUNTDOWN_TITLE')}</Title>
-          <p>{i18n.t('COUNTDOWN_DESCRIPTION')}</p>
+          <Paragraph>{i18n.t('COUNTDOWN_DESCRIPTION')}</Paragraph>
           <QRAccount account={routeParams.direction} />
           <CountDown startAt={createdAt} />
         </Section>
-        <Line display={IS_TEMP} />
 
         <Section display={IS_TEMP || IS_OK}>
           <Title>{i18n.t('DESTINATION_ACCOUNT_INFO_TITLE')}</Title>
-          <p>{i18n.t('DESTINATION_ACCOUNT_INFO_DESCRIPTION')}</p>
+          <Paragraph>{i18n.t('DESTINATION_ACCOUNT_INFO_DESCRIPTION')}</Paragraph>
           <QRAccount account={destination_account} qr={false} />
         </Section>
-        <Line display={IS_TEMP || IS_OK} />
 
       </div>
     )
