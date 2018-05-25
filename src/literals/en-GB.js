@@ -31,5 +31,6 @@ module.exports = {
   WHAT_IT_IS_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt',
   HOW_IT_IS_WORKS_TITLE: 'How it\'s ?',
   HOW_IT_IS_WORKS_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt',
+  CLAIM: 'Make your Nano cryptocurrency transactions untraceable'
 
 }
