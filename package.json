@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sui-bundler dev",
+    "start": "DEBUG=_debug sui-bundler dev",
     "co": "sui-mono commit",
     "lint": "sui-lint js && sui-lint sass",
     "precommit": "sui-precommit run",
@@ -43,7 +43,8 @@
       "react",
       "react-dom",
       "react-router",
-      "isomorphic-fetch"
+      "isomorphic-fetch",
+      "classnames"
     ],
     "offline": {
       "whitelist": [
@@ -65,6 +66,14 @@
         {
           "urlPattern": "chart\\.googleapis\\.com",
           "handler": "cacheFirst"
+        },
+        {
+          "urlPattern": "ajax\\.googleapis\\.com",
+          "handler": "cacheFirst"
+        },
+        {
+          "urlPattern": "www\\.google-analytics\\.com",
+          "handler": "networkFirst"
         }
       ]
     }
