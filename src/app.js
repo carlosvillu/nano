@@ -11,7 +11,13 @@ import withContext from '@s-ui/hoc/lib/withContext'
 import createClientContextFactoryParams from '@s-ui/react-initial-props/lib/createClientContextFactoryParams'
 import contextFactory from './contextFactory'
 
+import events, {GA_EVENTS} from './libs/events'
+
 import './styles/index.scss'
+
+events.subscribe(GA_EVENTS, ({category, action, label, value}) => {
+  window.ga('send', 'event', category, action, label, value)
+})
 
 contextFactory(createClientContextFactoryParams()).then(context => {
   match(
@@ -26,6 +32,7 @@ contextFactory(createClientContextFactoryParams()).then(context => {
     }
   )
 })
+
 register({
   first: () => window.alert('Content is cached for offline use.'),
   renovate: () => window.alert('New content is available; please refresh.')

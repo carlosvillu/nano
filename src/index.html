@@ -8,9 +8,40 @@
     <meta name="description" content="Send MoneyPrivacy">
     <meta name="robots" content="index,follow"><!-- All Search Engines -->
     <meta name="googlebot" content="index,follow"><!-- Google Specific -->
-    <link href="https://fonts.googleapis.com/css?family=Sura" rel="stylesheet">
+
+    <!-- Start navigation timing feature detect -->
+    <script>window.__perf = window.performance && performance.mark;</script>
+    <!-- End navigation timing feature detect -->
+
+    <!-- Start fonts -->
+    <script>
+    window.WebFontConfig = {
+      google: {families: ['Sura:400']},
+      timeout: 10000,
+      active: function() {
+        __perf && performance.mark('fonts:active');
+      }
+    };
+    </script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <!-- End fonts -->
   </head>
   <body>
+    <script>__perf && performance.mark('js:execute');</script>
     <div id="app"><!-- APP --></div>
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+      window.ga_debug = {trace: <%= htmlWebpackPlugin.options.env.DEBUG ? 'true' : 'false' %>}
+      ga('create', 'UA-40648195-12', 'auto');
+
+      if (location.hostname == 'localhost') {
+        ga('set', 'sendHitTask', null);
+      }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics<%= htmlWebpackPlugin.options.env.DEBUG %>.js'></script>
   </body>
+    <script>
+      function measureWebfontPerfAndFailures(){window.Promise&&new Promise(function(e,n){var i=/wf-(in)?active/.exec(document.documentElement.className),a=i&&!i[1];if(i)a?e():n();else{var t=WebFontConfig.active;WebFontConfig.inactive=n,WebFontConfig.active=function(){t(),e()},setTimeout(n,WebFontConfig.timeout)}}).then(function(){var e=measureDuration("fonts:active");e&&ga("send","timing","Fonts","active",e)}).catch(function(){ga("send","event","Fonts","error")})}function measureImagesVisibleTime(){var e=measureDuration("img:visible");e&&ga("send","timing","Images","visible",e)}function measureJavaSciptExecutionTime(){var e=measureDuration("js:execute");e&&ga("send","timing","JavaScript","execute",e)}function measureDuration(e,n){if(window.__perf){var i=n||"responseEnd",a=i+":"+e;performance.clearMeasures(a),performance.measure(a,i,e);var t=performance.getEntriesByName(a)[0];return Math.round(t.duration)}}window.onload=function(){measureWebfontPerfAndFailures(),measureImagesVisibleTime(),measureJavaSciptExecutionTime()};
+    </script>
 </html>
