@@ -7,6 +7,7 @@ import Paragraph from '../../components/Paragraph'
 import Request from '../../components/Request'
 import Section from '../../components/Section'
 import Input from '../../components/Form/Input'
+import TrackPageView from '../../components/TrackPageView'
 
 class Home extends React.PureComponent {
   static contextTypes = {i18n: PropTypes.object}
@@ -21,6 +22,7 @@ class Home extends React.PureComponent {
 
     return (
       <div className='Home'>
+        <TrackPageView />
         <Section>
           <Title>{i18n.t('DESTINATION_ACCOUNT_TITLE')}</Title>
           <Paragraph>{i18n.t('DESTINATION_ACCOUNT_DESCRIPTION')}</Paragraph>

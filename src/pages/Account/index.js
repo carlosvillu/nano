@@ -8,6 +8,7 @@ import QRAccount from '../../components/QRAccount'
 import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
+import TrackPageView from '../../components/TrackPageView'
 
 export default class Account extends React.PureComponent {
   static contextTypes = {i18n: PropTypes.object}
@@ -33,6 +34,7 @@ export default class Account extends React.PureComponent {
     const {i18n} = this.context
     return (
       <div className='Account'>
+        <TrackPageView />
         <Section display={IS_OK}>
           <Title>{i18n.t('ACCOUNT_OK_TITLE')}</Title>
           <Paragraph>{i18n.t('ACCOUNT_OK_DESCRIPTION')}</Paragraph>
