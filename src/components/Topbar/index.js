@@ -6,7 +6,11 @@ const Topbar = () => {
   return (
     <div className='Topbar'>
       <Link className='Topbar-link' to='/'>
-        <img className='Topbar-logo' src='https://svg-loaders.surge.sh/LogoOriginalVector.svg' />
+        <img
+          onLoad={() => window.__perf && window.performance.mark('img:visible')}
+          className='Topbar-logo'
+          src='https://svg-loaders.surge.sh/LogoOriginalVector.svg'
+        />
       </Link>
     </div>
   )
