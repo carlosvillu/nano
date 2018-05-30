@@ -21,7 +21,7 @@ events.subscribe(GA_EVENTS, ({category, action, label, value}) => {
 
 contextFactory(createClientContextFactoryParams()).then(context => {
   match(
-    { routes, history: browserHistory },
+    {routes, history: browserHistory},
     (err, redirectLocation, renderProps) => {
       if (err) {
         console.error(err)

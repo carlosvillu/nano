@@ -28,12 +28,12 @@ const loadAccountPage = loadPage(contextFactory, () =>
 export default (
   <Router>
     <Route component={require('./components/App').default}>
-      <Route path='/'>
+      <Route path="/">
         <IndexRoute getComponent={loadHomePage} />
-        <Route path='how-it-works' getComponent={loadHowItWorksPage} />
-        <Route path='contact' getComponent={loadContactPage} />
-        <Route path='about' getComponent={loadAboutPage} />
-        <Route path='account/:direction' getComponent={loadAccountPage} />
+        <Route path="how-it-works" getComponent={loadHowItWorksPage} />
+        <Route path="contact" getComponent={loadContactPage} />
+        <Route path="about" getComponent={loadAboutPage} />
+        <Route path="account/:direction" getComponent={loadAccountPage} />
       </Route>
     </Route>
   </Router>

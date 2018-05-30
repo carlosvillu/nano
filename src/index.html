@@ -1,5 +1,6 @@
 <html>
   <head>
+    <script async src='https://www.google-analytics.com/analytics<%= htmlWebpackPlugin.options.env.DEBUG %>.js'></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>NanoPrivacy</title>
@@ -34,12 +35,12 @@
 
       window.ga_debug = {trace: <%= htmlWebpackPlugin.options.env.DEBUG ? 'true' : 'false' %>}
       ga('create', 'UA-40648195-12', 'auto');
+      ga('require', 'GTM-T6ZD2S6') // Google optimizele
 
       if (location.hostname == 'localhost') {
         ga('set', 'sendHitTask', null);
       }
     </script>
-    <script async src='https://www.google-analytics.com/analytics<%= htmlWebpackPlugin.options.env.DEBUG %>.js'></script>
   </body>
     <script>
       function measureWebfontPerfAndFailures(){window.Promise&&new Promise(function(e,n){var i=/wf-(in)?active/.exec(document.documentElement.className),a=i&&!i[1];if(i)a?e():n();else{var t=WebFontConfig.active;WebFontConfig.inactive=n,WebFontConfig.active=function(){t(),e()},setTimeout(n,WebFontConfig.timeout)}}).then(function(){var e=measureDuration("fonts:active");e&&ga("send","timing","Fonts","active",e)}).catch(function(){ga("send","event","Fonts","error")})}function measureImagesVisibleTime(){var e=measureDuration("img:visible");e&&ga("send","timing","Images","visible",e)}function measureJavaSciptExecutionTime(){var e=measureDuration("js:execute");e&&ga("send","timing","JavaScript","execute",e)}function measureDuration(e,n){if(window.__perf){var i=n||"responseEnd",a=i+":"+e;performance.clearMeasures(a),performance.measure(a,i,e);var t=performance.getEntriesByName(a)[0];return Math.round(t.duration)}}window.onload=function(){measureWebfontPerfAndFailures(),measureImagesVisibleTime(),measureJavaSciptExecutionTime()};
