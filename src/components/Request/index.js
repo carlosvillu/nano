@@ -7,7 +7,7 @@ import LoadingSVG from '../SVG/Loading'
 export default class Request extends React.PureComponent {
   static displayName = 'Request'
 
-  static contextTypes = { domain: PropTypes.object, i18n: PropTypes.object }
+  static contextTypes = {domain: PropTypes.object, i18n: PropTypes.object}
   static defaultProps = {onResponse: () => {}}
   static propTypes = {
     onResponse: PropTypes.func,
@@ -20,17 +20,20 @@ export default class Request extends React.PureComponent {
     hasAccount: false
   }
 
-  render () {
+  render() {
     const {i18n} = this.context
     const {destination} = this.props
     const {isLoading, hasError, hasAccount} = this.state
 
-    const button = cx('Request-button', {'has-account': hasAccount, 'has-destination': destination})
+    const button = cx('Request-button', {
+      'has-account': hasAccount,
+      'has-destination': destination
+    })
     const loader = cx('Request-loading', {'is-loading': isLoading})
     const error = cx('Request-error', {'has-error': hasError})
 
     return (
-      <div className='Request'>
+      <div className="Request">
         <div className={button} onClick={this.requestClickHandler}>
           <LoadingSVG className={loader} />
           <span>{i18n.t('REQUEST')}</span>
@@ -41,16 +44,24 @@ export default class Request extends React.PureComponent {
   }
 
   requestClickHandler = async () => {
-    if (!this.props.destination) { return }
+    if (!this.props.destination) {
+      return
+    }
 
     this.setState({isLoading: true, hasError: false, hasAccount: false})
 
     const resp = await this.context.domain
       .get('request_entry_accounts_use_case')
       .execute()
-      .catch(() => this.setState({isLoading: false, hasError: true, hasAccount: false}))
+      .catch(() =>
+        this.setState({isLoading: false, hasError: true, hasAccount: false})
+      )
 
-    this.setState({isLoading: false, hasError: false, hasAccount: resp.account !== undefined})
+    this.setState({
+      isLoading: false,
+      hasError: false,
+      hasAccount: resp.account !== undefined
+    })
     this.props.onResponse(resp)
   }
 }

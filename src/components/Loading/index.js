@@ -10,8 +10,8 @@ const Loading = ({children}) => {
     <React.Fragment>
       <Line />
       <Section>
-        <div className='Loading'>
-          <LoadingSVG className='Loading-spinner' />
+        <div className="Loading">
+          <LoadingSVG className="Loading-spinner" />
           <p>{children}</p>
         </div>
       </Section>
