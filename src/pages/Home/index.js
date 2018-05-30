@@ -16,12 +16,12 @@ class Home extends React.PureComponent {
 
   state = {response: {}, account: ''}
 
-  render () {
+  render() {
     const {i18n} = this.context
     const {router} = this.props
 
     return (
-      <div className='Home'>
+      <div className="Home">
         <TrackPageView />
         <Section>
           <Title>{i18n.t('DESTINATION_ACCOUNT_TITLE')}</Title>
@@ -37,7 +37,9 @@ class Home extends React.PureComponent {
           <Title>{i18n.t('REQUEST_ACCOUNT_TITLE')}</Title>
           <Paragraph>{i18n.t('REQUEST_ACCOUNT_DESCRIPTION')}</Paragraph>
           <Request
-            onResponse={({account, token}) => router.push(`/account/${account}?token=${token}`)}
+            onResponse={({account, token}) =>
+              router.push(`/account/${account}?token=${token}`)
+            }
             destination={this.state.account}
           />
         </Section>

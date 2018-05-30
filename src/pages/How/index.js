@@ -10,11 +10,11 @@ export default class HowItWorks extends React.PureComponent {
   static contextTypes = {i18n: PropTypes.object}
   static displayName = 'HowItWorks'
 
-  render () {
+  render() {
     const {i18n} = this.context
 
     return (
-      <div className='HowItWorks'>
+      <div className="HowItWorks">
         <Section>
           <Title>{i18n.t('WHAT_IT_IS_TITLE')}</Title>
           <Paragraph>{i18n.t('WHAT_IT_IS_DESCRIPTION')}</Paragraph>
