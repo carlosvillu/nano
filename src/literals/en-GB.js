@@ -41,5 +41,11 @@ module.exports = {
   HOW_IT_IS_WORKS_TITLE: "How it's ?",
   HOW_IT_IS_WORKS_DESCRIPTION:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi non erat facilisis ultrices. Integer ac vestibulum velit. In hac habitasse platea dictumst. Pellentesque sodales varius risus at lobortis. Duis dolor nisi, aliquet in suscipit id, porttitor a neque. Sed sem mauris, finibus eget varius non, tristique id mauris. Integer pellentesque lorem eget congue tincidunt',
-  CLAIM: 'Make your Nano cryptocurrency transactions untraceable'
+  CLAIM: 'Make your Nano cryptocurrency transactions untraceable',
+  FLASHMESSAGE_BETA:
+    'We are in close BETA. DONT send nanos without read carefull this',
+  BETA_TITLE: 'We are in closed beta',
+  BETA_DESCRIPTION:
+    'We are open to a small group of users. If you are not one of them please! dont use this services. We are in heavy development and you can lost your money. In any case, even you are one of our beta testers, please, please, please, DONT send us more the 2 nanos. Beauce we will only return this amount if any error happend.',
+  READ_MORE: 'read more'
 }
