@@ -6,6 +6,7 @@ import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import TrackPageView from '../../components/TrackPageView'
+import Image from '../../components/Image'
 
 export default class About extends React.PureComponent {
   static displayName = 'About'
@@ -20,10 +21,7 @@ export default class About extends React.PureComponent {
           <Title>Toni Navarro</Title>
           <div className="About-card">
             <a href="https://www.linkedin.com/in/toni-navarro-a0b6ab6/">
-              <img
-                onLoad={() =>
-                  window.__perf && window.performance.mark('img:visible')
-                }
+              <Image
                 className="About-img"
                 src="https://svg-loaders.surge.sh/toni.jpg"
                 width="150"
@@ -38,10 +36,7 @@ export default class About extends React.PureComponent {
           <Title>Carlos Villuendas</Title>
           <div className="About-card">
             <a href="https://www.linkedin.com/in/carlosvillu/">
-              <img
-                onLoad={() =>
-                  window.__perf && window.performance.mark('img:visible')
-                }
+              <Image
                 className="About-img"
                 src="https://svg-loaders.surge.sh/carlitos.jpg"
                 width="150"
