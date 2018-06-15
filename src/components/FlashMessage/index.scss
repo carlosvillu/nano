@@ -1,0 +1,15 @@
+.FlashMessage {
+  z-index: 1;
+  background-color: tomato;
+  color: white;
+  left: 0;
+  padding: 15px;
+  position: sticky;
+  top: 65px;
+  width: 100%;
+
+  &-readmore {
+    margin-left: 5px;
+    color: white;
+  }
+}

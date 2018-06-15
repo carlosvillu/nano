@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import LoadingSVG from '../SVG/Loading'
 
+const VALID_NANO_REGEXP = /(xrb|nano)_([13456789abcdefghijkmnopqrstuwxyz]{60})/
+
 export default class Request extends React.PureComponent {
   static displayName = 'Request'
 
@@ -27,7 +29,7 @@ export default class Request extends React.PureComponent {
 
     const button = cx('Request-button', {
       'has-account': hasAccount,
-      'has-destination': destination
+      'has-destination': destination.match(VALID_NANO_REGEXP)
     })
     const loader = cx('Request-loading', {'is-loading': isLoading})
     const error = cx('Request-error', {'has-error': hasError})
@@ -44,7 +46,7 @@ export default class Request extends React.PureComponent {
   }
 
   requestClickHandler = async () => {
-    if (!this.props.destination) {
+    if (!this.props.destination.match(VALID_NANO_REGEXP)) {
       return
     }
 
