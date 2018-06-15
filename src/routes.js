@@ -25,6 +25,10 @@ const loadAccountPage = loadPage(contextFactory, () =>
   import(/* webpackChunkName: "Account" */ './pages/Account')
 )
 
+const loadBetaPage = loadPage(contextFactory, () =>
+  import(/* webpackChunkName: "Beta" */ './pages/Beta')
+)
+
 export default (
   <Router>
     <Route component={require('./components/App').default}>
@@ -34,6 +38,7 @@ export default (
         <Route path="contact" getComponent={loadContactPage} />
         <Route path="about" getComponent={loadAboutPage} />
         <Route path="account/:direction" getComponent={loadAccountPage} />
+        <Route path="beta" getComponent={loadBetaPage} />
       </Route>
     </Route>
   </Router>
