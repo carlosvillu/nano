@@ -28,7 +28,7 @@ window.onerror = (message, file, line, col, error) => {
 }
 
 window.addEventListener('unhandledrejection', event =>
-  events(GA_EVENTS, {
+  events.publish(GA_EVENTS, {
     category: CATEGORIES.JS.PROMISE.UNHANDLE,
     action: event.promise,
     label: event.reason
