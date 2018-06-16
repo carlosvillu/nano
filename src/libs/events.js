@@ -31,4 +31,16 @@ const events = (function() {
 })()
 
 export const GA_EVENTS = 'ga:event'
+export const CATEGORIES = {
+  APP: {
+    ACCOUNT: {
+      STATUS: 'app:account:status'
+    }
+  },
+  JS: {
+    DOMAIN: {ERROR: 'js:domain:error', SUCCESS: 'js:domain:success'},
+    GLOBAL: {ERROR: 'js:global:error'},
+    PROMISE: {UNHANDLE: 'js:promise:unhandledrejection'}
+  }
+}
 export default events
