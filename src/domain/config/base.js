@@ -1,3 +1,3 @@
 export default {
-  API_HOST: 'localhost:3001'
+  API_HOST: 'http://api.privacynano.com:8080'
 }

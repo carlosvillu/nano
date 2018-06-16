@@ -2,7 +2,8 @@ import RequestEntryAccountsUseCase from './RequestEntryAccountsUseCase'
 import InfoAccountsUseCase from './InfoAccountsUseCase'
 
 export default class AccountsUseCasesFactory {
-  static requestEntryAccountsUseCase = () => new RequestEntryAccountsUseCase()
+  static requestEntryAccountsUseCase = ({config}) =>
+    new RequestEntryAccountsUseCase({config})
 
-  static infoAccountsUseCase = () => new InfoAccountsUseCase()
+  static infoAccountsUseCase = ({config}) => new InfoAccountsUseCase({config})
 }

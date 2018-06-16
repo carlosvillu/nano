@@ -1,22 +1,17 @@
 import {UseCase} from '@s-ui/domain'
 
-const randomIntegerInRange = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min
-const STATUS = ['KO', 'OK', 'TEMP']
-
 export default class InfoAccountsUseCase extends UseCase {
-  execute({account, token} = {}) {
-    return new Promise((resolve, reject) => {
-      setTimeout(
-        () =>
-          resolve({
-            destination_account:
-              'xrb_1aytxweddts89xgu7ojsajixkzppu67zwtpgai19iw9qo3g67xon5a855qkj',
-            createdAt: Date.now(),
-            status: STATUS[randomIntegerInRange(0, 2)]
-          }),
-        3000
-      )
-    })
+  constructor({config} = {}) {
+    super()
+    this._config = config
+  }
+
+  async execute({account, token} = {}) {
+    const url = `${this._config.get(
+      'API_HOST'
+    )}/public/account/${account}/check/${token}`
+    const resp = await window.fetch(url)
+    const wallet = await resp.json()
+    return wallet
   }
 }
