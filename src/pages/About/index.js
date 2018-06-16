@@ -5,7 +5,6 @@ import Line from '../../components/Line'
 import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
-import TrackPageView from '../../components/TrackPageView'
 import Image from '../../components/Image'
 
 export default class About extends React.PureComponent {
@@ -16,7 +15,6 @@ export default class About extends React.PureComponent {
     const {i18n} = this.context
     return (
       <div className="About">
-        <TrackPageView />
         <Section>
           <Title>Toni Navarro</Title>
           <div className="About-card">

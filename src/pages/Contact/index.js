@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Input from '../../components/Form/Input'
-import TrackPageView from '../../components/TrackPageView'
 
 class Contact extends React.PureComponent {
   static displayName = Contact
@@ -14,7 +13,6 @@ class Contact extends React.PureComponent {
     const {i18n} = this.context
     return (
       <div className="Contact">
-        <TrackPageView />
         <Section>
           <Title>{i18n.t('CONTACT_TITLE')}</Title>
           <form
