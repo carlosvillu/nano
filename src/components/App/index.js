@@ -4,9 +4,11 @@ import PropTypes from 'prop-types'
 import Topbar from '../Topbar'
 import Footer from '../Footer'
 import FlashMessage from '../FlashMessage'
+import TrackPageView from '../TrackPageView'
 
 const App = ({children}, {i18n}) => (
   <div className="App">
+    <TrackPageView />
     <Topbar />
     <FlashMessage href="/beta">{i18n.t('FLASHMESSAGE_BETA')}</FlashMessage>
     <header className="App-header">
