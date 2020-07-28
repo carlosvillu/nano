@@ -7,7 +7,7 @@ import LoadingSVG from '../SVG/Loading'
 
 const Loading = ({children}) => {
   return (
-    <React.Fragment>
+    <>
       <Line />
       <Section>
         <div className="Loading">
@@ -16,7 +16,7 @@ const Loading = ({children}) => {
         </div>
       </Section>
       <Line />
-    </React.Fragment>
+    </>
   )
 }
 
