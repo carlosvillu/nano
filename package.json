@@ -7,7 +7,6 @@
     "start": "DEBUG=_debug sui-bundler dev",
     "co": "sui-mono commit",
     "lint": "sui-lint js && sui-lint sass",
-    "precommit": "sui-precommit run",
     "deploy": "sui-bundler build -C && firebase deploy",
     "ssr": "sui-bundler build -C && sui-ssr build -C && node --inspect ./server"
   },
@@ -26,62 +25,25 @@
     "reset-css": "3.0.0"
   },
   "devDependencies": {
-    "@s-ui/bundler": "2",
-    "@s-ui/ssr": "1",
-    "@s-ui/lint": "2",
+    "@s-ui/bundler": "6",
+    "@s-ui/lint": "3",
     "@s-ui/mono": "1",
     "@s-ui/precommit": "2",
-    "husky": "0.13.4"
-  },
-  "config": {
-    "validate-commit-msg": {
-      "types": "@s-ui/mono/src/types"
-    }
-  },
-  "sui-bundler": {
-    "vendor": [
-      "react",
-      "react-dom",
-      "react-router",
-      "isomorphic-fetch",
-      "classnames"
-    ],
-    "offline": {
-      "whitelist": [
-        "::all::"
-      ],
-      "runtime": [
-        {
-          "urlPattern": "svg-loaders\\.surge\\.sh",
-          "handler": "cacheFirst"
-        },
-        {
-          "urlPattern": "fonts\\.googleapis\\.com",
-          "handler": "cacheFirst"
-        },
-        {
-          "urlPattern": "fonts\\.gstatic\\.com",
-          "handler": "cacheFirst"
-        },
-        {
-          "urlPattern": "chart\\.googleapis\\.com",
-          "handler": "cacheFirst"
-        },
-        {
-          "urlPattern": "ajax\\.googleapis\\.com",
-          "handler": "cacheFirst"
-        },
-        {
-          "urlPattern": "www\\.google-analytics\\.com",
-          "handler": "networkFirst"
-        }
-      ]
-    }
+    "@s-ui/ssr": "7",
+    "husky": "4.2.5"
   },
   "eslintConfig": {
     "extends": [
       "./node_modules/@s-ui/lint/eslintrc.js"
     ]
   },
-  "sasslintConfig": "./node_modules/@s-ui/lint/sass-lint.yml"
+  "prettier": "./node_modules/@s-ui/lint/.prettierrc.js",
+  "stylelint": {
+    "extends": "./node_modules/@s-ui/lint/stylelint.config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "sui-precommit run"
+    }
+  }
 }
